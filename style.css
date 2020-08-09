@@ -1,0 +1,267 @@
+html, body {
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+      height: 100%;
+      font-family: "Monument Extended";
+      background: url(https://media.giphy.com/media/3oEduMhFrYvKk4giac/giphy.gif) no-repeat 50% 50%;
+      background-size: cover;
+      text-transform: uppercase;
+}
+
+.gif-overlay {
+      z-index: -1;
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+      height: 100%;
+      background: rgba(14, 14, 14, 0.8);
+}
+
+.nav {
+      position: fixed;
+      width: 100%;
+      height: 80px;
+}
+
+.artist {
+      z-index: 2;
+      position: fixed;
+      line-height: 80px;
+      margin: 0 40px;
+      color: #fff;
+}
+span{
+      color: yellow;
+}
+.watch {
+      z-index: 2;
+      position: fixed;
+      right: 140px;
+      line-height: 80px;
+      margin: 0 40px;
+      color: red;
+      padding: 0 10px;
+      font-family: Helvetica;
+      font-size: 12px;
+      font-weight: 100;
+      letter-spacing: 4px;
+}
+
+.watch ion-icon {
+      z-index: 2;
+      position: relative;
+      top: 1px;
+      padding-right: 6px;
+}
+
+.menu {
+      z-index: 2;
+      position: fixed;
+      right: 0;
+      font-size: 20px;
+      line-height: 80px;
+      margin: 0 40px;
+      color: #fff;
+      padding-top: 4px;
+}
+
+.hero-gif {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      animation-delay: 2s;
+      -webkit-animation: animateGIF 4s cubic-bezier(0,.58,1,.58);
+}
+@-webkit-keyframes animateGIF {
+      0% { 
+            width: 100%;
+            height: 100%;  
+      }
+
+      70% {
+            width: 100%;
+            height: 100%;
+      }
+
+      100% {
+            width: 90%;
+            height: 90%;
+      }
+}
+
+.hero-title {
+      position: absolute;
+      top: 40%;
+      left: 28%;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+}
+
+.hero-title h1 {
+      color: white;
+      text-transform: uppercase;
+      font-size: 80px;
+      margin-bottom: 0%;
+}
+  
+.glitch {
+      position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+}
+
+.glitch::before {
+      left: 4px;
+      text-shadow: -31px 0 rgb(0, 174, 255);
+      background: black;
+    }
+.glitch::after {
+      left: -3px;
+      text-shadow: -3px 0 orange;
+      background: black;
+}
+
+.glitch::before {
+      clip: rect(54px, 250px, 56px, 40px);
+}
+
+@keyframes noise-anim {
+      0% {
+        clip-path: inset(40% 0 61% 0);
+      }
+      20% {
+        clip-path: inset(92% 0 1% 0);
+      }
+      40% {
+        clip-path: inset(43% 0 1% 0);
+      }
+      60% {
+        clip-path: inset(25% 0 58% 0);
+      }
+      80% {
+        clip-path: inset(54% 0 7% 0);
+      }
+      100% {
+        clip-path: inset(58% 0 43% 0);
+      }
+}
+
+.glitch::before {
+      animation: noise-anim 2s infinite linear alternate-reverse;
+}
+    
+.glitch::after {    
+      animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.hero-title p {
+      color: yellow;
+      font-family: Helvetica;
+      text-transform: uppercase;
+      font-size: 22px;
+      letter-spacing: 14px;
+}
+.download1{
+      position: absolute;
+      top: 47%;
+      left: 6%;
+      width: 15%;
+      height: auto;
+}
+.download2{
+      position: absolute;
+      top: 66%;
+      left: 6%;
+      width: 15%;
+      height: auto;
+}
+.social-media {
+      position: absolute;
+      bottom: .1%;
+      transform: translateY(-50%);
+}
+
+.social-media ul li {
+      display: inline-block;
+      list-style: none;
+      color: grey;
+      padding: 0 10px;
+      font-family: Helvetica;
+      font-size: 12px;
+      font-weight: 100;
+}
+
+.listensong {
+      position: absolute;
+      bottom: 0%;
+      right: 40px;
+      transform: translateY(-50%);
+}
+
+.listensong ul li {
+      display: inline-block;
+      list-style: none;
+      color: #fff;
+      padding: 0 10px;
+}
+
+#rotated  {
+      color: white;
+      font-family: Helvetica;
+      font-weight: 100;
+      font-size: 12px;
+}
+
+.rotatethis {
+      position: absolute;
+      top: 70%;
+      right: 10%;
+      transform: translate(-50%, -50%);
+      animation: rotating 20s linear infinite;
+}
+
+@keyframes rotating  {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+@media screen and (max-width: 900px) {
+      .hero-gif{
+            width: 300px;
+            height: 500px;
+            left: 50%;
+            top: 50%;
+      }
+      .watch, .rotatethis, {
+            display: none !important;
+      }
+
+      .hero-title {
+            top: 45%;
+            left: 50%;
+      }
+
+      .hero-title h1 {
+            font-size: 32px;
+      }
+}
+
+
+
+

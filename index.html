@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>COD Mobile | Landing Page</title>
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="style.css">
+
+      <!-- ionicons -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+     
+      <!-- tweenmax - gsap -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</head>
+<body>   
+                  <div class="nav">
+                        <div class="artist">COD <span>Mobile</span></div>
+                        <div class="watch"><ion-icon name="play"></ion-icon> play now</div>
+                        <div class="menu"><ion-icon name="menu"></ion-icon></div>
+                  </div>
+                  
+                 
+                  	<video class="hero-gif" autoplay muted loop>
+                  		<source src="codm-hero-video-desktop.mp4" type="video/mp4">
+                  	</video>
+
+                  <div class="hero-title">
+                        <h1 class="glitch" data-text="Underrated">CALL OF DUTY</h1>
+                        <p>MOBILE</p>
+                  </div>
+                  
+                  <img class="download1" src="download-1.png">
+                  <img class="download2" src="download-2.png">
+
+                  <div class="rotatethis">
+                        <h2 id="rotated">Action • Adventure • Shooting • </h2>
+                  </div>
+
+                  <div class="social-media">
+                        <ul>
+                              <li>facebook</li>
+                              <li>instagram</li>
+                              <li>twitter</li>
+                        </ul>
+                  </div>
+
+
+            <div class="gif-overlay"></div>
+
+      <script type="text/javascript" src="https://rawgit.com/peterhry/CircleType/master/dist/circletype.min.js"></script>
+
+<script>
+      
+      const circleType = new CircleType(document.getElementById('rotated'));   
+
+      TweenMax.from(".artist", 2, {
+      delay: 5.4,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".watch", 2, {
+      delay: 5.5,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".menu", 2, {
+      delay: 5.6,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".rotatethis", 2, {
+      delay: 6,
+      opacity: 0,
+      ease: Expo.easeInOut
+      });
+
+      TweenMax.staggerFrom(".social-media ul li", 2, {
+      delay: 5.7,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      }, 0.1);
+
+      TweenMax.staggerFrom(".listensong ul li", 2, {
+      delay: 5.9,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      }, 0.1);  
+
+      TweenLite.fromTo(".hero-title h1", 0.3, {
+            x:-6,
+            y:2,
+            opacity: 0,
+      }, 
+      {
+            delay: 5,
+            x: 6,
+            y: -2,
+            opacity: 1,
+            ease:RoughEase.ease.config({
+                  strength:8,
+                  points:40, 
+                  template:Linear.easeNone, 
+                  randomize:false}),
+            clearProps:"all"
+      });
+
+      TweenLite.fromTo(".hero-title p", 0.3, {
+            x:-6,
+            y:2,
+            opacity: 0,
+      }, 
+      {
+            delay: 9,
+            x: 6,
+            y: -2,
+            opacity: 1,
+            ease:RoughEase.ease.config({
+                  strength:8,
+                  points:40, 
+                  template:Linear.easeNone, 
+                  randomize:false}),
+            clearProps:"all"
+      });
+      TweenLite.fromTo(".download1", 0.3, {
+            x:-6,
+            y:2,
+            opacity: 0,
+      }, 
+      {
+            delay: 10,
+            x: 6,
+            y: -2,
+            opacity: 1,
+            ease:RoughEase.ease.config({
+                  strength:8,
+                  points:40, 
+                  template:Linear.easeNone, 
+                  randomize:false}),
+            clearProps:"all"
+      });
+      TweenLite.fromTo(".download2", 0.3, {
+            x:-6,
+            y:2,
+            opacity: 0,
+      }, 
+      {
+            delay: 11,
+            x: 6,
+            y: -2,
+            opacity: 1,
+            ease:RoughEase.ease.config({
+                  strength:8,
+                  points:40, 
+                  template:Linear.easeNone, 
+                  randomize:false}),
+            clearProps:"all"
+      });
+
+</script>
+</body>
+</html>
